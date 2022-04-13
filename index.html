@@ -15,8 +15,8 @@
   </head>
   <body>
     <header class="header">
-      <div class="nav__overlay has-fade"></div>
-      <nav class="flex flex-jc-sb flex-ai-c">
+      <div class="nav__overlay hide-for-desktop has-fade"></div>
+      <nav class="container container--pall flex flex-jc-sb flex-ai-c">
         <a href="#" class="header__logo flex flex-jc-sb flex-ai-c">
           <img src="/images/logo.svg" alt="" />
         </a>
@@ -29,18 +29,20 @@
         </a>
 
         <div class="header__links hide-for-mobile">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-            <a href="">Blog</a>
-            <a href="">Careers</a>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Blog</a>
+          <a href="">Careers</a>
 
-            <!-- <a href="" class="button">Request Invite</a> -->
+          <!-- <a href="" class="button">Request Invite</a> -->
         </div>
-        <button type="button" class="button hide-for-mobile">Request Invite</button>
+        <button type="button" class="button hide-for-mobile">
+          Request Invite
+        </button>
       </nav>
 
-      <div class="overlay__links has-fade">
+      <div class="overlay__links has-fade hide-for-desktop">
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Contact</a>
@@ -48,7 +50,24 @@
         <a href="">Careers</a>
       </div>
     </header>
-<div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt soluta deleniti maxime tenetur. Laborum consequuntur distinctio nesciunt dicta alias aspernatur nulla quam omnis consequatur unde, eligendi voluptatem in, ipsam dolores eos consectetur ex reiciendis! Earum ullam enim pariatur voluptate.</div>
+    <section class="hero">
+      <div class="container">
+<div class="hero__image"></div>
+      <div class="hero__text container--pall">
+        <div class="text__center">
+          <h1>Next generation digital banking!!!!</h1>
+          <p>
+            Take your financial life online. Your Easybank account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and much
+            more.
+          </p>
+          <button type="button" class="button">Request Invite</button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt soluta deleniti maxime tenetur. Laborum consequuntur distinctio nesciunt dicta alias aspernatur nulla quam omnis consequatur unde, eligendi voluptatem in, ipsam dolores eos consectetur ex reiciendis! Earum ullam enim pariatur voluptate.</div> -->
     <script src="/app/js/script.js"></script>
   </body>
 </html>

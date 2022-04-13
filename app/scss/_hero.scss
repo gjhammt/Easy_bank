@@ -1,0 +1,104 @@
+.hero {
+    // flex-direction: column;
+    background: $veryLightGray;
+    .container{
+        @include breakpoints-up(large){
+        display: flex;
+        align-items: center;
+    }
+    }
+  &__image {
+    position: relative;
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+    //   &::before{
+    //       content: '';
+    //       background-image: url('/images/bg-intro-mobile.svg');
+        @include breakpoints-up(medium){
+      min-height: 22rem;
+      background-position: center 70%;
+    }
+    @include breakpoints-up(large){
+        min-height: 41rem;
+        flex: 3;
+        order: 2;
+        background: none;
+        // background-image: url('/images/bg-intro-desktop.svg');
+        // background-position: left center ;
+    }
+    &::before{
+      @include breakpoints-up(large){
+         
+          content: '';
+        position: absolute;
+        // display: block;
+        // width: 100%;
+        height: 100%;
+        background-image: url('/images/bg-intro-desktop.svg');
+        background-size: 90%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+       width: 150%;
+          background-size: 122%;
+          background-position: 0% 83%;
+      }
+
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        // display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/image-mockups.png');
+        background-size: 93%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoints-up(medium){
+          background-size: 50%;
+      }
+
+      @include breakpoints-up(large){
+        width: 120%;
+        height: 122%;
+        background-size: 94%;
+      background-position: center 150%;
+      left: 22%;
+      }
+    }
+  }
+
+  &__text {
+      text-align: center;
+      @include breakpoints-up(large){
+          text-align: left;
+        flex: 2;
+        order: 1;
+    }
+    .text__center {
+      h1 {
+          font-size: 1.875rem;
+          font-weight: $light;
+          color: $darkBlue;
+          line-height: 1.15;
+          margin-bottom: 1.5rem;
+          @include breakpoints-up(large){
+              font-size: $font-xlg;
+          }
+      }
+
+      p {
+          font-size: 1rem;
+          line-height: 1.5;
+          margin-bottom: 2.5rem;
+      }
+
+      .button {
+      }
+    }
+  }
+}
