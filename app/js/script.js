@@ -1,15 +1,23 @@
 const header = document.querySelector('.header')
 const btnHamburger = document.querySelector('.header__toggle');
 const navOverlay = document.querySelector('.nav__overlay');
+const faddingElems = document.querySelectorAll('.has-fade')
 
 btnHamburger.addEventListener('click', () => {
-    if(btnHamburger.classList.contains('open')){
-        btnHamburger.classList.remove("open");
-        navOverlay.classList.add("fade-out");
-        navOverlay.classList.remove('fade-in')
+    if(header.classList.contains('open')){
+
+        header.classList.remove("open");
+        faddingElems.forEach((elm) => {
+            elm.classList.add("fade-out");
+            elm.classList.remove("fade-in");
+        })
+        // navOverlay.classList.add("fade-out");
+        // navOverlay.classList.remove('fade-in')
     } else{
-        btnHamburger.classList.add("open");
-        navOverlay.classList.add("fade-in");
-        navOverlay.classList.remove("fade-out");
+        header.classList.add("open");
+        faddingElems.forEach((elm) => {
+            elm.classList.add("fade-in");
+            elm.classList.remove("fade-out");
+        })
     }
 })

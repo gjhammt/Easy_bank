@@ -143,6 +143,29 @@ button, .button {
 
 .header {
   padding: 0.9375rem 1.5rem;
+  z-index: 1;
+}
+
+.header.open .header__toggle > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__toggle > span:nth-child(2) {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:nth-child(3) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header .nav__overlay {
@@ -182,22 +205,6 @@ button, .button {
   margin-bottom: 5px;
 }
 
-.header__toggle.open > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header__toggle.open > span:nth-child(2) {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  opacity: 0;
-}
-
-.header__toggle.open > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 .header__links a {
   position: relative;
   color: #9698a6;
@@ -235,4 +242,24 @@ button, .button {
 .header .button {
   background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+.header .overlay__links {
+  width: calc(100% - 3rem);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1.625rem;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.header .overlay__links a {
+  display: block;
+  padding: 0.625rem;
+  color: #2d314d;
+  text-align: center;
 }
