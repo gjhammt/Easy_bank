@@ -1,6 +1,8 @@
 .header {
   // padding: 0.9375rem 1.5rem;
+  position: relative;
   z-index: 1;
+
   
 //   border: 1px solid red;
   &.open {
@@ -45,12 +47,15 @@
     // }
   }
   nav {
+    position: relative;
     background: $white;
     padding-top: 1.0635rem;
     padding-bottom: 1.0635rem;
   }
   &__logo {
     img {
+      width: 8.8125rem;
+      height: 1.375rem;
     }
   }
 
@@ -76,17 +81,17 @@
       // top: 15px;
       margin-bottom: -2px;
     }
-    >span:nth-child(3){
-      // position: absolute;
-      // top: 20px;
-      // top: 15px;
-    }
+    // >span:nth-child(3){
+    //   // position: absolute;
+    //   // top: 20px;
+    //   // top: 15px;
+    // }
     
   }
   &__links {
     a {
       position: relative;
-    //   font-size: $font-sm;
+      font-size: $font-sm;
       color: $grayishBlue;
       transition: color 300ms ease-in-out;
       &:not(:last-child) {
