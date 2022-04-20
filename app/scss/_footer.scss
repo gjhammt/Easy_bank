@@ -116,6 +116,12 @@
     font-size: 0.8125rem;
     color: $grayishBlue;
 
+
+      @include breakpoints-down(medium) {
+        margin-top: 2rem;
+      }
+   
+
     @include breakpoints-up(large) {
       grid-area: copyright;
       align-self: end;
@@ -124,7 +130,7 @@
   }
 
   .attribution {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-size: 0.875rem;
   }
 }

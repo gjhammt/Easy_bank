@@ -767,6 +767,12 @@ button:hover::before,
   color: #9698a6;
 }
 
+@media (max-width: 63.9375em) {
+  .footer__copyright {
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width: 64em) {
   .footer__copyright {
     grid-area: copyright;
@@ -779,7 +785,7 @@ button:hover::before,
 }
 
 .footer .attribution {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 0.875rem;
 }
 
